@@ -1,13 +1,16 @@
 import { useQuery } from "@tanstack/react-query"
-import { fetchMovies } from "../../../api/movies.api";
+import {  fetchMovies, fetchSeries } from "../../../api/movies.api";
 import { IMovies } from "../../../../types";
 
-export const useMovies:any = () => {
+export const useFetchSeries:any = () => {
   return useQuery<IMovies[], Error>({
-    queryKey: ['movies'],
-    queryFn: async () => {
-      const response = await fetchMovies();
-      return response.data;
-    },
+    queryKey: ["movies"],
+    queryFn: () => fetchSeries(),
+  });
+};
+export const useFetchMovies:any = () => {
+  return useQuery<IMovies[], Error>({
+    queryKey: ["movies"],
+    queryFn: () => fetchMovies(),
   });
 };

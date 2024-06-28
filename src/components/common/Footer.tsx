@@ -1,33 +1,51 @@
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-10 px-40 mt-8">
+    <footer className="bg-gray-800 text-white py-10 px-5 md:px-40 mt-8">
       <div className="flex flex-col items-start">
         <div className="flex justify-center space-x-4 mb-4 text-gray-400">
-          <Link to="/" className="hover:underline border-r-2 border-gray-400 pr-5 text-sm">
+          <Link
+            to="/"
+            className="hover:underline border-r-2 border-gray-400 pr-0 md:pr-5 text-[10px] md:text-sm flex justify-center items-center "
+          >
             Home
           </Link>
-          <Link to="/" className="hover:underline border-r-2 border-gray-400 pr-5 text-sm">
+          <Link
+            to="/"
+            className="hover:underline border-r-2 border-gray-400 pr-0 md:pr-5 text-[10px] md:text-sm flex justify-center items-center "
+          >
             Terms and Conditions
           </Link>
-          <Link to="/" className="hover:underline border-r-2 border-gray-400 pr-5 text-sm">
+          <Link
+            to="/"
+            className="hover:underline border-r-2 border-gray-400 pr-0 md:pr-5 text-[10px] md:text-sm flex justify-center items-center "
+          >
             Privacy Policy
           </Link>
-          <Link to="/" className="hover:underline border-r-2 border-gray-400 pr-5 text-sm">
+          <Link
+            to="/"
+            className="hover:underline border-r-2 border-gray-400 pr-0 md:pr-5 text-[10px] md:text-sm flex justify-center items-center "
+          >
             Collection Statement
           </Link>
-          <Link to="/" className="hover:underline border-r-2 border-gray-400 pr-5 text-sm">
+          <Link
+            to="/"
+            className="hover:underline border-r-2 border-gray-400 pr-0 md:pr-5 text-[10px] md:text-sm flex justify-center items-center "
+          >
             Help
           </Link>
-          <Link to="/" className="hover:underline">
+          <Link
+            to="/"
+            className="hover:underline r-0 md:pr-5 text-[10px] md:text-sm flex justify-center items-center "
+          >
             Manage Account
           </Link>
         </div>
-        <div className="text-center mb-4 text-gray-400 text-sm">
+        <div className="text-center mb-4 text-gray-400 text-[10px] md:text-sm flex justify-center items-center ">
           &copy; 2016 DEMO Streaming. All Rights Reserved.
         </div>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="flex justify-center space-x-4 mb-4">
           <Link
             to="https://www.facebook.com"
