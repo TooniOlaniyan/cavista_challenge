@@ -1,5 +1,3 @@
-import React from "react";
-
 const Series = () => {
   return (
     <div className="flex flex-col items-center">
@@ -11,17 +9,15 @@ const Series = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="p-2 border border-gray-300 w-full"
+            className="p-2 border border-gray-300 w-full h-[2.3rem] shadow-lg"
           />
-          <span className="absolute flex justify-center items-center p-3 right-0 top-0 text-gray-400 bg-blue-800 h-full">
+          <span className="absolute flex justify-center items-center py-3 px-6 right-0 top-0 text-gray-400 bg-blue-800 h-full">
             <img src="/assets/search.png" className="w-5 h-5 object-contain" />
           </span>
         </div>
-        <select
-          className="p-2 border border-gray-300 rounded-lg"
-        >
-          <option value="" disabled>
-            Sort by
+        <select className="p-2 border border-gray-300 rounded-lg shadow-lg h-[2.3rem]">
+          <option value="" disabled selected hidden>
+            Sort By...
           </option>
           <option value="year-a">Year in descending</option>
           <option value="year-d">Year in ascending</option>

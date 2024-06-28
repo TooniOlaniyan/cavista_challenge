@@ -6,7 +6,9 @@ import RootLayout from "./_root/RootLayout";
 import { Routes , Route} from 'react-router-dom'
 import { Movies , Series , Home } from "./_root/pages";
 
+
 function App() {
+
   return (
     <main>
       <Routes>
