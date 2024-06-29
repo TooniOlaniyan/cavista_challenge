@@ -1,8 +1,8 @@
 import { useState } from "react";
 import MovieCard from "../../components/MovieCard";
 import { useFetchSeries } from "../../lib/react-query/hooks/queries/useMovies";
-import SearchInput from "../../components/common/SearchInput";
-import FilterDropdown from "../../components/common/FilterDropdown";
+import SearchInput from "../../components/SearchInput";
+import FilterDropdown from "../../components/FilterDropdown";
 import { sortOptions } from "../../constants";
 
 const Series = () => {
