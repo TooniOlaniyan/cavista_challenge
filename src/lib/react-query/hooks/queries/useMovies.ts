@@ -5,12 +5,18 @@ import { IMovies } from "../../../../types";
 export const useFetchSeries:any = () => {
   return useQuery<IMovies[], Error>({
     queryKey: ["movies"],
-    queryFn: () => fetchSeries(),
+    queryFn: async () => {
+      const response = await fetchSeries();
+      return response;
+    },
   });
 };
 export const useFetchMovies:any = () => {
   return useQuery<IMovies[], Error>({
-    queryKey: ["movies"],
-    queryFn: () => fetchMovies(),
+    queryKey: ["series"],
+    queryFn: async () => {
+      const response = await fetchMovies();
+      return response;
+    },
   });
 };

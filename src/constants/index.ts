@@ -12,3 +12,11 @@ export const homePageData = [
     image: "/assets/placeholder.png",
   },
 ];
+
+export const sortOptions = [
+  { label: "Sort By", value: "", disabled: true, hidden: true , selected:true },
+  { label: "Year (Descending)", value: "year_desc" },
+  { label: "Year (Ascending)", value: "year_asc" },
+  { label: "Title (Descending)", value: "title_desc" },
+  { label: "Title (Ascending)", value: "title_asc" },
+];

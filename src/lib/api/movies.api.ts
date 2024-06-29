@@ -1,25 +1,21 @@
-import data from "../feed/sample.json";
-import { IMovies } from "../../types";
+import { CavistaAPI } from "./axios";
 
 export const fetchSeries = async () => {
-  return new Promise<any>((resolve) => {
-    setTimeout(() => {
-      const filteredMovies = data.entries.filter(
-        (movie: IMovies) => movie.releaseYear >= 2010 && movie.programType==='series'
-      );
-      const first21Movies = filteredMovies.slice(0, 21); // Select the first 21 movies
-      resolve(first21Movies);
-    }, 1000);
-  });
+  const { data } = await CavistaAPI.get(
+    "/entries?_limit=21&programType=series&releaseYear_gte=2010"
+  );
+   const alphaNumericData = data.sort((a: any, b: any) =>
+     a.title.localeCompare(b.title)
+   );
+   return alphaNumericData;
+
+
 };
 export const fetchMovies = async () => {
-  return new Promise<any>((resolve) => {
-    setTimeout(() => {
-      const filteredMovies = data.entries.filter(
-        (movie: IMovies) => movie.releaseYear >= 2010 && movie.programType==='movie'
-      );
-      const first21Movies = filteredMovies.slice(0, 21); // Select the first 21 movies
-      resolve(first21Movies);
-    }, 1000);
-  });
+  const { data } = await CavistaAPI.get("/entries?_limit=21&programType=movie&releaseYear_gte=2010");
+
+  const alphaNumericData = data.sort((a: any, b: any) =>
+    a.title.localeCompare(b.title)
+  );
+  return alphaNumericData;
 };
