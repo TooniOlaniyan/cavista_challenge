@@ -37,25 +37,32 @@ const Series = () => {
 
   return (
     <div className="flex flex-col items-start">
-      <h2 className="text-2xl mb-6  md:px-20 px-5 py-5 text-white w-full bg-gray-800">
-        Popular Series
+      <h2 className="text-2xl mb-6 md:px-20 px-5 py-5 text-white w-full bg-gray-800">
+        Popular Movies
       </h2>
-      {isLoading ? (
-        <div className="py-5 px-5 md:px-20">Loading...</div>
-      ) : (
-        <div className="flex flex-col items-center justify-center">
+
+      {isLoading && <div className="py-5 px-5 md:px-20">Loading...</div>}
+
+      {seriesError && (
+        <div className="px-5 py-5 md:px-20">Oops, something went wrong...</div>
+      )}
+
+      {!isLoading && !seriesError && (
+        <div className="flex flex-col items-center justify-center w-full">
           <div className="flex flex-col gap-7 md:gap-0 md:flex-row items-center justify-between mb-6 w-full px-5 md:px-20">
-            <div className="relative  mr-4 w-full md:w-[30rem]">
+            <div className="relative mr-4 w-full md:w-[30rem]">
               <SearchInput onSearch={setSearchQuery} />
               <span className="absolute flex justify-center items-center py-3 px-6 right-0 top-0 text-gray-400 bg-blue-800 h-full">
                 <img
                   src="/assets/search.png"
                   className="w-5 h-5 object-contain"
+                  alt="Search"
                 />
               </span>
             </div>
             <FilterDropdown options={sortOptions} onChange={setSortOption} />
           </div>
+
           {sortedSeriesData.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 px-5 md:px-20">
               {sortedSeriesData.map((movie: any) => (
@@ -64,13 +71,10 @@ const Series = () => {
             </div>
           ) : (
             <div className="text-center text-gray-600 font-bold text-lg mt-10">
-              Opps this series does not exit.....
+              This movie does not exist
             </div>
           )}
         </div>
-      )}
-      {seriesError && (
-        <div className="px-5 py-5 md:px-20">Opps, something went wrong...</div>
       )}
     </div>
   );
