@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Movie and Series Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple movie and series library that uses React + Vite, TypeScript, and Tailwind CSS for the frontend, and JSON Server for mocking a REST API backend. It uses @tanstack/react-query for data fetching and state management.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The main goal of this project is to create an engaging landing page for a Movie and Series App using React. It features a header with a logo and auth button, filters section for sorting by movies and series, the movie/series section is a data grid along with a footer. The application is fully responsive and compatible across various screen sizes.
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Header Section:** Includes a logo and Auth button (non-functional).
+- **Filters Section:** This is a Search input that allows users to filter movies/series by search for them. The search begins at char>3
+- **Dropdown Sort Section:** Allows users to sort the movies/series by year and title in ascending or descending order.
+- **Movie/Series card Section (Data Grid):** Displays the first 21 movie/series items fetched from the Mock json, with each item card containing an image snd movie/series title.
+- **Footer Section:** Balances the bottom of the webpage and contains social media and download links (non-functional).
+- **API Reference:**The backend API is mocked using JSON Server. The mock json is hosted on Render to act like a react Server API
 
-- Configure the top-level `parserOptions` property like this:
+## Tools & Technology
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- React + vite
+- Typescript,
+- Tailwind CSS,
+- Tanstack Query,
+  
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## How to Use
+
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the development server using `npm run dev`.
+4. Access the application in your browser at `http://localhost:5173`.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
