@@ -21,6 +21,9 @@ The main goal of this project is to create an engaging landing page for a Movie 
 - Typescript,
 - Tailwind CSS,
 - Tanstack Query,
+
+## Link to a video that shows the app functionalities
+-https://www.loom.com/share/8ef67824bbda44b7b573145f88cbcb49?sid=93ead6c6-650a-435f-a3e6-ef9464405692
   
 
 ## How to Use
