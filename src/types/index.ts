@@ -1,7 +1,7 @@
 export interface IHomeCard {
-    type:string
-    description:string
-    image?: string
+  type: string;
+  description: string;
+  image?: string;
 }
 export interface Image {
   url: string;
@@ -17,4 +17,19 @@ export interface IMovies {
     "Poster Art": Image;
   };
   releaseYear: number;
+}
+
+export interface DropdownProps {
+  options: {
+    label: string;
+    value: string;
+    disabled?: boolean;
+    hidden?: boolean;
+    selected?: boolean;
+  }[];
+  onChange: (value: string) => void;
+}
+
+export interface SearchInputProps {
+  onSearch: (query: string) => void;
 }

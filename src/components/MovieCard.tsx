@@ -10,7 +10,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
       <div className=" min-h-[16rem] w-full md:w-[10rem]">
         <img
           src={movie.images["Poster Art"].url}
-          alt={movie.programType}
+          alt={movie.title}
           className="rounded-lg mb-2 object-contain w-full h-full"
         />
       </div>

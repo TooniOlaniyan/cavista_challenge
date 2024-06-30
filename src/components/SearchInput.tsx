@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-interface SearchInputProps {
-  onSearch: (query: string) => void;
-}
+import { SearchInputProps } from "../types";
 
 const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
   const [query, setQuery] = useState("");
