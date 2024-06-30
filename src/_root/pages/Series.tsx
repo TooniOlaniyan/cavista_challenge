@@ -38,7 +38,7 @@ const Series = () => {
   return (
     <div className="flex flex-col items-start">
       <h2 className="text-2xl mb-6 md:px-20 px-5 py-5 text-white w-full bg-gray-800">
-        Popular Movies
+        Popular Series
       </h2>
 
       {isLoading && <div className="py-5 px-5 md:px-20">Loading...</div>}
